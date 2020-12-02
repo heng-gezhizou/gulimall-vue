@@ -142,11 +142,11 @@ import Category from "../common/category";
 import AddOrUpdate from "./attrgroup-add-or-update";
 export default {
   //import引入的组件需要注入到对象中才能使用
-  components: { Category },
+  components: { Category, AddOrUpdate },
   data() {
     //这里存放数据
     return {
-      catId:0,
+      catId: 0,
       dataForm: {
         key: "",
       },
@@ -164,13 +164,13 @@ export default {
   },
   methods: {
     //感知父节点被点击
-    treeNodeClick(data,node,component) {
-        console.log("感知到父节点被点击",data,node,component)
-        console.log("被点击的id",data.catId)
-        if(node.level == 3){
-          this.catId = node.data.catId
-          this.getDataList()
-        }
+    treeNodeClick(data, node, component) {
+      console.log("感知到父节点被点击", data, node, component);
+      console.log("被点击的id", data.catId);
+      if (node.level == 3) {
+        this.catId = node.data.catId;
+        this.getDataList();
+      }
     },
     // 获取数据列表
     getDataList() {
