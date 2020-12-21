@@ -123,7 +123,7 @@ export default {
         ],
         valueType: [
           {
-            required: true,
+            required: false,
             message: "值类型不能为空",
             trigger: "blur"
           }
